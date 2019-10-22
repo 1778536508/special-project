@@ -1,0 +1,239 @@
+@charset "UTF-8";
+.total-box {
+  width: 10rem;
+}
+.total-box .content-box {
+  width: 100%;
+}
+.total-box .content-box .content-box-pics {
+  width: 100%;
+}
+.total-box .content-box .content-box-pics li {
+  width: 100%;
+  position: relative;
+}
+.total-box .content-box .content-box-pics li.ended .content-box-pics-item-box b {
+  opacity: 0;
+  transition: all .5s;
+}
+.total-box .content-box .content-box-pics li div {
+  width: 100%;
+}
+.total-box .content-box .content-box-pics li div img {
+  display: block;
+  width: 100%;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box i {
+  position: absolute;
+  bottom: 7.46666667rem;
+  right: 0.66666667rem;
+  width: 3.2rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box i img {
+  display: block;
+  width: 100%;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box b {
+  position: absolute;
+  bottom: 6.66666667rem;
+  left: 0.66666667rem;
+  width: 5.33333333rem;
+  opacity: 1;
+  transition: all 3s;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box b img {
+  display: block;
+  width: 100%;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box a {
+  position: absolute;
+  bottom: 10.66666667rem;
+  right: 0.66666667rem;
+  width: 1.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box a img {
+  display: block;
+  width: 100%;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a2 i {
+  bottom: 11.73333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a2 b {
+  bottom: 15.46666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a2 a {
+  bottom: 14.66666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a3 b {
+  width: 8.66666667rem;
+  bottom: 18.66666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a4 i {
+  bottom: 5.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a4 b {
+  bottom: 8rem;
+  width: 6.66666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a4 a {
+  bottom: 8rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a5 b {
+  width: 6rem;
+  bottom: 7.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a6 i {
+  bottom: 9.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a6 b {
+  bottom: 9.33333333rem;
+  left: 1.33333333rem;
+  width: 4.8rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a6 a {
+  bottom: 12.66666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a7 i {
+  bottom: 5.33333333rem;
+  right: 4rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a7 a {
+  bottom: 5.33333333rem;
+  left: 1.6rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a8 b {
+  width: 5.06666667rem;
+  bottom: 24.8rem;
+  left: 1.93333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a9 b {
+  width: 6.93333333rem;
+  bottom: 15.33333333rem;
+  left: 0.66666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a10 i {
+  bottom: 2.66666667rem;
+  right: 4rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a10 a {
+  bottom: 2.66666667rem;
+  left: 1.6rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a11 i {
+  bottom: 0rem;
+  right: 2.66666667rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a11 a {
+  bottom: 1.6rem;
+  right: 1.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a11 b {
+  width: 4rem;
+  bottom: 1.6rem;
+  left: 0.53333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a12 i {
+  bottom: 0rem;
+  right: 1.33333333rem;
+  z-index: 1;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a12 a {
+  bottom: 2.66666667rem;
+  right: 1.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a12 b {
+  width: 6rem;
+  bottom: 1.33333333rem;
+  left: 0.53333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a13 i {
+  bottom: 1.06666667rem;
+  right: 1.33333333rem;
+}
+.total-box .content-box .content-box-pics li div.content-box-pics-item-box.a13 a {
+  bottom: 1.33333333rem;
+  right: 4.66666667rem;
+}
+.total-box .home-box {
+  width: 100%;
+}
+.total-box .home-box .juan-box {
+  width: 100%;
+  position: relative;
+}
+.total-box .home-box .juan-box .juan-back {
+  width: 100%;
+}
+.total-box .home-box .juan-box .juan-back img {
+  display: block;
+  width: 100%;
+}
+.total-box .home-box .juan-box.ended .juan-text {
+  height: 0.13333333rem;
+  transition: all 3s;
+}
+.total-box .home-box .juan-box .juan-text {
+  position: absolute;
+  left: 50%;
+  margin-left: -3rem;
+  width: 6rem;
+  height: 16rem;
+  top: 1.33333333rem;
+  transition: all 3s;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box .home-img-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box .home-img-box img {
+  display: block;
+  width: 6rem;
+  height: 16rem;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box i {
+  display: block;
+  position: absolute;
+  width: 6.26666667rem;
+  height: 0.4rem;
+  background: url("../image/b-l.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(1) {
+  left: -0.13333333rem;
+  top: 0;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(2) {
+  left: -0.13333333rem;
+  bottom: -0.26666667rem;
+}
+.total-box .home-box .text-box {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.total-box .home-box .text-box i img {
+  display: block;
+  width: 100%;
+}
+.total-box .home-box .text-box i:nth-of-type(1) {
+  width: 1.33333333rem;
+  position: absolute;
+  left: 1.33333333rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.total-box .home-box .text-box i:nth-of-type(2) {
+  width: 2.66666667rem;
+  position: absolute;
+  left: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
