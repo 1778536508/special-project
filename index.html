@@ -45,7 +45,7 @@
                     <a><img src="./image/backgroundz/1.14.png" alt=""></a>
                 </div>
             </li>
-            <li data-delighter>
+            <li>
                 <div>
                     <img src="./image/backgrounds/16.jpg" alt="">
                 </div>
@@ -188,21 +188,81 @@
             <div><img src="./image/b-d.png" alt=""></div>
         </div>
     </div>
+    <div class="video-box">
+        <video controls="controls" width="100%" x5-video-player-type="h5" x5-video-orientation="landscape" preload="metadata">
+            //火狐
+            <source src="video/FF4.ogv" type="video/ogg">
+            //谷歌
+            <source src="video/FF4.webm" type="video/webm">
+            //ie
+            <source src="video/FF4.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="music-box active">
+        <img src="./image/jmuc.png" alt="">
+        <audio
+        id="musicAudio"
+        controls="controls"
+        autoplay="autoplay"
+        loop="loop"
+        >
+        <source src="https://webfs.yun.kugou.com/201910230125/e99e542126987ea2bff20b6690266e9e/G006/M01/05/1D/Rg0DAFUAtPyAOxwIAC3yd1-YDFI441.mp3"/>
+    </audio>
+    </div>
 </div>
 </body>
 </html>
 <script>
     window.onload = function () {
+        // 默认加载底部
         var t = document.body.clientHeight;
         setTimeout(function () {
             window.scroll(0, t);
         },10);
+        // 点击播放视频
         $('.content-box-pics-item-box > i').click(function () {
             console.log($(this).attr('data-video'))
+            $('.video-box').show();
+            $('.video-box source').attr('src', $(this).attr('data-video'))
+            $('.video-box source').play();
         })
+        // 点击关闭视频
+        $('.video-box').click(function(){
+            $(this).hide();
+        })
+        // 卷轴
         $(document).scroll(function() {
           var scroH = $(document).scrollTop();  //滚动高度
-
+          console.log(scroH)
+          if(scroH <= 19492) {
+            $('.juan-text-box i:nth-of-type(1)').addClass('active');
+          } else {
+            $('.juan-text-box i:nth-of-type(1)').removeClass('active');
+          }
+          if(scroH <= 18823) {
+            $('.juan-text-box i:nth-of-type(1)').removeClass('active');
+          }
+        })
+        // 音频播放
+        document.getElementsByTagName('audio')[0].play();
+        document.addEventListener("WeixinJSBridgeReady", function () { 
+            document.getElementsByTagName('audio')[0].play(); 
+            document.getElementsByTagName('audio')[0].play(); 
+        }, false);
+        let state = true;
+        $('.music-box').click(function() {
+            if(state) {
+                document.getElementsByTagName('audio')[0].pause(); 
+                $(this).removeClass('active')
+            } else {
+                document.getElementsByTagName('audio')[0].play(); 
+                $(this).addClass('active')
+            }
+            state = !state
+        })
+        
+        $('.total-box').css({
+            opacity: 1
         })
     };
 </script>
