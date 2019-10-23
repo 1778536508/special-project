@@ -13,6 +13,16 @@
     <title>Document</title>
 </head>
 <body>
+<!--横屏提示-->
+<div class="row-tishi">
+    <img src="./image/hengtis.gif" alt="">
+</div>
+<!--loading-->
+<div class="loading-box">
+    <img src="./image/huaban-2.jpg" alt="">
+    <i><img src="./image/loading.gif" alt=""></i>
+    <b id="loadingNum">0%</b>
+</div>
 <div class="total-box" id="total-box">
     <div class="content-box">
         <ul class="content-box-pics">
@@ -171,7 +181,7 @@
         <div class="juan-box" data-delighter>
             <div class="juan-text">
                 <div class="juan-text-box">
-                    <i></i>
+                    <i id="juan-left"></i>
                     <div class="home-img-box">
                         <img src="./image/b-j.jpg" alt="">
                     </div>
@@ -188,26 +198,21 @@
             <div><img src="./image/b-d.png" alt=""></div>
         </div>
     </div>
+<!--    视频-->
     <div class="video-box">
-        <video controls="controls" width="100%" x5-video-player-type="h5" x5-video-orientation="landscape" preload="metadata">
-            //火狐
-            <source src="video/FF4.ogv" type="video/ogg">
-            //谷歌
-            <source src="video/FF4.webm" type="video/webm">
-            //ie
-            <source src="video/FF4.mp4" type="video/mp4">
-        </video>
+
     </div>
+<!--    音频-->
     <div class="music-box active">
-        <img src="./image/jmuc.png" alt="">
+        <img src="./image/mic2.png" alt="">
         <audio
         id="musicAudio"
         controls="controls"
         autoplay="autoplay"
         loop="loop"
         >
-        <source src="https://webfs.yun.kugou.com/201910230125/e99e542126987ea2bff20b6690266e9e/G006/M01/05/1D/Rg0DAFUAtPyAOxwIAC3yd1-YDFI441.mp3"/>
-    </audio>
+            <source src="./image/KF016410_Asian_Borders.mp3"/>
+        </audio>
     </div>
 </div>
 </body>
@@ -223,46 +228,97 @@
         $('.content-box-pics-item-box > i').click(function () {
             console.log($(this).attr('data-video'))
             $('.video-box').show();
-            $('.video-box source').attr('src', $(this).attr('data-video'))
-            $('.video-box source').play();
+            setvideo($(this).attr('data-video'));
+            document.getElementsByTagName('audio')[0].pause();
+            $('.music-box').removeClass('active');
+            $('.music-box').children('img').attr('src', './image/mic1.png')
         })
         // 点击关闭视频
         $('.video-box').click(function(){
             $(this).hide();
+            document.getElementById('video').pause()
+            document.getElementsByTagName('audio')[0].play();
+            $('.music-box').addClass('active')
+            $('.music-box').children('img').attr('src', './image/mic2.png')
         })
+
+        function setvideo(url) {
+            var youku = $(".video-box");
+            var htmlstr ='<video id="video" width="100%" src="'+url+'" poster="img/lunyu.png" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" x5-playsinline="" x5-video-player-fullscreen="false" controls="controls"></video>'
+            youku.html(htmlstr);
+            document.getElementById('video').play();
+        };
+
+
         // 卷轴
         $(document).scroll(function() {
           var scroH = $(document).scrollTop();  //滚动高度
-          console.log(scroH)
-          if(scroH <= 19492) {
+          // console.log(scroH)
+          // var swHeight = $(window).scrollTop()+$(window).height();
+          // var mTop= document.getElementById('juan-left').scrollHeight;
+        var off= $('.home-img-box').offset().top + $('.home-img-box').height();
+        var tto = $(window).height() + $(window).scrollTop();
+          // if( 208 <= (tto - off) <= 804 ) {
+          //     $('.juan-text-box i:nth-of-type(1)').removeClass('active');
+          // } else {
+          //     $('.juan-text-box i:nth-of-type(1)').addClass('active');
+          // }
+          if( tto - off <= 804 && tto - off >= 208) {
             $('.juan-text-box i:nth-of-type(1)').addClass('active');
           } else {
-            $('.juan-text-box i:nth-of-type(1)').removeClass('active');
-          }
-          if(scroH <= 18823) {
             $('.juan-text-box i:nth-of-type(1)').removeClass('active');
           }
         })
         // 音频播放
         document.getElementsByTagName('audio')[0].play();
-        document.addEventListener("WeixinJSBridgeReady", function () { 
-            document.getElementsByTagName('audio')[0].play(); 
-            document.getElementsByTagName('audio')[0].play(); 
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementsByTagName('audio')[0].play();
+            document.getElementsByTagName('audio')[0].play();
         }, false);
         let state = true;
         $('.music-box').click(function() {
             if(state) {
                 document.getElementsByTagName('audio')[0].pause(); 
                 $(this).removeClass('active')
+                $(this).children('img').attr('src', './image/mic1.png')
             } else {
                 document.getElementsByTagName('audio')[0].play(); 
                 $(this).addClass('active')
+                $(this).children('img').attr('src', './image/mic2.png')
             }
             state = !state
         })
-        
-        $('.total-box').css({
-            opacity: 1
-        })
+
+        //loading
+        function fnLoading() {
+            var num = 0;
+            var IntervalName = setInterval(function () {
+                num++;
+                if(num >= 100) {
+                    num = 100
+                }
+                $('#loadingNum').html(num + '%');
+                if(num == 100) {
+                    setTimeout(function () {
+                        clearInterval(IntervalName);
+                        $('.total-box').css({
+                            opacity: 1
+                        })
+                        $('.loading-box').addClass('active');
+                        setTimeout(function () {
+                            $('.loading-box').hide();
+                        },500)
+                    },500)
+                }
+            })
+        }
+        // 开屏提示
+        setTimeout(function () {
+            $('.row-tishi').hide();
+            $('.loading-box').show();
+            setTimeout(function () {
+                fnLoading();
+            },800)
+        },2000)
     };
 </script>
