@@ -121,7 +121,7 @@
                 <div class="content-box-pics-item-box a6">
                     <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC0661_01.mp4"><img src="./image/backgroundz/9.png" alt=""></i>
                     <b data-delighter><img src="./image/backgroundz/2-6.png" alt=""></b>
-                    <a><img src="./image/backgroundz/1.4.png" alt=""></a>
+                    <a><img src="./image/backgroundz/1.9.png" alt=""></a>
                 </div>
             </li>
             <li data-delighter>
@@ -137,9 +137,9 @@
                     <img src="./image/backgrounds/6.jpg" alt="">
                 </div>
                 <div class="content-box-pics-item-box a4">
-                    <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC1073_01.mp4"><img src="./image/backgroundz/3.png" alt=""></i>
+                    <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC1073_01.mp4"><img src="./image/backgroundz/7.png" alt=""></i>
                     <b data-delighter><img src="./image/backgroundz/2-4.png" alt=""></b>
-                    <a><img src="./image/backgroundz/1.3.png" alt=""></a>
+                    <a><img src="./image/backgroundz/1.7.png" alt=""></a>
                 </div>
             </li>
             <li data-delighter>
@@ -160,9 +160,9 @@
                     <img src="./image/backgrounds/3.jpg" alt="">
                 </div>
                 <div class="content-box-pics-item-box a2">
-                    <i data-video=""><img src="./image/backgroundz/2.png" alt=""></i>
+                    <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC0661_01.mp4"><img src="./image/backgroundz/5.png" alt=""></i>
                     <b><img src="./image/backgroundz/2-2.png" alt=""></b>
-                    <a><img src="./image/backgroundz/1.2.png" alt=""></a>
+                    <a><img src="./image/backgroundz/1.5.png" alt=""></a>
                 </div>
             </li>
             <li data-delighter>
@@ -170,7 +170,7 @@
                     <img src="./image/backgrounds/2.jpg" alt="">
                 </div>
                 <div class="content-box-pics-item-box a1">
-                    <i data-video=""><img src="./image/backgroundz/1.png" alt=""></i>
+                    <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2017MOOC9990_02.mp4"><img src="./image/backgroundz/1.png" alt=""></i>
                     <b><img src="./image/backgroundz/2-1.png" alt=""></b>
                     <a><img src="./image/backgroundz/1.1.png" alt=""></a>
                 </div>
@@ -178,9 +178,9 @@
         </ul>
     </div>
     <div class="home-box">
-        <div class="juan-box" data-delighter>
+        <div class="juan-box">
             <div class="juan-text">
-                <div class="juan-text-box">
+                <div class="juan-text-box" data-delighter>
                     <i id="juan-left"></i>
                     <div class="home-img-box">
                         <img src="./image/b-j.jpg" alt="">
@@ -232,7 +232,7 @@
             document.getElementsByTagName('audio')[0].pause();
             $('.music-box').removeClass('active');
             $('.music-box').children('img').attr('src', './image/mic1.png')
-        })
+        });
         // 点击关闭视频
         $('.video-box').click(function(){
             $(this).hide();
@@ -240,35 +240,47 @@
             document.getElementsByTagName('audio')[0].play();
             $('.music-box').addClass('active')
             $('.music-box').children('img').attr('src', './image/mic2.png')
-        })
-
+        });
         function setvideo(url) {
             var youku = $(".video-box");
-            var htmlstr ='<video id="video" width="100%" src="'+url+'" poster="img/lunyu.png" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" x5-playsinline="" x5-video-player-fullscreen="false" controls="controls"></video>'
+            var htmlstr = '';
+            if(SetSystem() == 'Android') {
+                htmlstr ='<video id="video" width="100%" src="'+url+'" poster="img/lunyu.png" preload="auto" controls="controls"></video>'
+            } else {
+                htmlstr ='<video id="video" width="100%" src="'+url+'" poster="img/lunyu.png" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" x5-playsinline="" x5-video-player-fullscreen="false" controls="controls"></video>'
+            }
             youku.html(htmlstr);
             document.getElementById('video').play();
         };
 
-
+        function SetSystem() {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if (isAndroid) {
+                //这个是安卓操作系统
+                return 'Android'
+            }
+            if (isIOS) {
+                //这个是ios操作系统
+                return 'Ios'
+            }
+        }
         // 卷轴
-        $(document).scroll(function() {
-          var scroH = $(document).scrollTop();  //滚动高度
-          // console.log(scroH)
-          // var swHeight = $(window).scrollTop()+$(window).height();
-          // var mTop= document.getElementById('juan-left').scrollHeight;
-        var off= $('.home-img-box').offset().top + $('.home-img-box').height();
-        var tto = $(window).height() + $(window).scrollTop();
-          // if( 208 <= (tto - off) <= 804 ) {
-          //     $('.juan-text-box i:nth-of-type(1)').removeClass('active');
-          // } else {
-          //     $('.juan-text-box i:nth-of-type(1)').addClass('active');
-          // }
-          if( tto - off <= 804 && tto - off >= 208) {
-            $('.juan-text-box i:nth-of-type(1)').addClass('active');
-          } else {
-            $('.juan-text-box i:nth-of-type(1)').removeClass('active');
-          }
-        })
+        // $(document).scroll(function() {
+        //   // var scroH = $(document).scrollTop();  //滚动高度
+        //   // console.log(scroH)
+        //   // var swHeight = $(window).scrollTop()+$(window).height();
+        //   // var mTop= document.getElementById('juan-left').scrollHeight;
+        //   // var off= $('.home-img-box').offset().top + $('.home-img-box').height();
+        //   // var tto = $(window).height() + $(window).scrollTop();
+        //   // // console.log(tto - off);
+        //   // if( tto - off <= 728 && tto - off >= 75) {
+        //   //   $('.juan-text-box i:nth-of-type(1)').addClass('active');
+        //   // } else {
+        //   //   $('.juan-text-box i:nth-of-type(1)').removeClass('active');
+        //   // }
+        // })
         // 音频播放
         document.getElementsByTagName('audio')[0].play();
         document.addEventListener("WeixinJSBridgeReady", function () {
@@ -314,11 +326,14 @@
         }
         // 开屏提示
         setTimeout(function () {
-            $('.row-tishi').hide();
-            $('.loading-box').show();
+            fnLoading();
+        },800)
+        $('.row-tishi').click(function () {
+            $(this).addClass('active')
             setTimeout(function () {
-                fnLoading();
-            },800)
-        },2000)
+                $('.row-tishi').hide()
+            },100)
+        })
+
     };
 </script>

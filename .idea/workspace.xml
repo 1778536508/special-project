@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="259" column="61" selection-start-line="259" selection-start-column="61" selection-end-line="259" selection-end-column="61" />
+            <state relative-caret-position="16">
+              <caret line="267" column="9" selection-start-line="267" selection-start-column="9" selection-end-line="267" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="184">
+              <caret line="371" column="22" lean-forward="true" selection-start-line="371" selection-start-column="22" selection-end-line="371" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -42,8 +42,19 @@
       <find>video</find>
       <find>getClientRects</find>
       <find>music-box</find>
-      <find>loading-box</find>
       <find>total-box</find>
+      <find>loading-box</find>
+      <find>http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC0661_01.mp4</find>
+      <find>row-tishi</find>
+      <find>setvideo</find>
+      <find>text-box</find>
+      <find>1.7</find>
+      <find>7.png</find>
+      <find>tops</find>
+      <find>juan-box</find>
+      <find>juan-text</find>
+      <find>juan-text-box</find>
+      <find>8.jpg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,6 +113,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -130,12 +142,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571795872342</updated>
-      <workItem from="1571795873694" duration="7520000" />
+      <workItem from="1571795873694" duration="13369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7520000" />
+    <option name="totallyTimeSpent" value="13369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -174,15 +186,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="259" column="61" selection-start-line="259" selection-start-column="61" selection-end-line="259" selection-end-column="61" />
+        <state relative-caret-position="16">
+          <caret line="267" column="9" selection-start-line="267" selection-start-column="9" selection-end-line="267" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="184">
+          <caret line="371" column="22" lean-forward="true" selection-start-line="371" selection-start-column="22" selection-end-line="371" selection-end-column="22" />
         </state>
       </provider>
     </entry>

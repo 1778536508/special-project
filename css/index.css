@@ -42,6 +42,17 @@
     transform: scale(1.1);
   }
 }
+@-webkit-keyframes topsY {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 55%;
+  }
+  100% {
+    top: 50%;
+  }
+}
 .row-tishi {
   position: fixed;
   left: 0;
@@ -51,6 +62,10 @@
   margin: auto;
   background: rgba(0, 0, 0, 0.8);
   z-index: 2;
+}
+.row-tishi.active {
+  opacity: 0;
+  transition: all .3s;
 }
 .row-tishi img {
   display: block;
@@ -64,7 +79,6 @@
   margin: auto;
 }
 .loading-box {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -151,9 +165,14 @@
   background: rgba(0, 0, 0, 0.8);
 }
 .total-box .video-box video {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -moz-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  -o-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
   position: absolute;
-  top: 2.66666667rem;
-  transform: rotate(90deg);
+  top: 50%;
+  visibility: visible;
 }
 .total-box .content-box {
   width: 100%;
@@ -332,16 +351,20 @@
 .total-box .home-box .juan-box .juan-text {
   position: absolute;
   left: 50%;
+  bottom: 1.33333333rem;
   margin-left: -3rem;
   width: 6rem;
-  height: 16rem;
-  bottom: 1.33333333rem;
   transition: all 3s;
+  overflow: hidden;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box {
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 16rem;
+  transition: all 3s;
+}
+.total-box .home-box .juan-box .juan-text .juan-text-box.ended {
+  height: 0rem;
+  transition: all 3s;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box .home-img-box {
   width: 100%;
@@ -352,6 +375,10 @@
   display: block;
   width: 6rem;
   height: 16rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0rem;
+  margin-left: -3rem;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i {
   display: block;
@@ -364,16 +391,11 @@
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(1) {
   left: -0.13333333rem;
-  top: 0;
-}
-.total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(1).active {
-  position: fixed;
-  left: 50%;
-  margin-left: -3.13333333rem;
+  top: 0rem;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(2) {
   left: -0.13333333rem;
-  bottom: -0.26666667rem;
+  bottom: -0.2rem;
 }
 .total-box .home-box .text-box {
   width: 100%;
@@ -396,7 +418,14 @@
   position: absolute;
   left: 1.33333333rem;
   top: 50%;
-  transform: translateY(-10%);
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+  -webkit-animation: topsY 3s linear infinite;
+  -moz-animation: topsY 3s linear infinite;
+  -o-animation: topsY 3s linear infinite;
+  animation: topsY 3s linear infinite;
 }
 .total-box .home-box .text-box i:nth-of-type(2) {
   width: 2.66666667rem;
