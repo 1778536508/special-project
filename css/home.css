@@ -209,6 +209,8 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-top: 2px;
+  font-weight: 600;
+  font-family: '微软雅黑';
 }
 .footer {
   width: 100%;

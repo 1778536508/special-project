@@ -54,7 +54,7 @@
                 <div class="ideo-box-pics">
                     <ul id="ideo-box-pics">
                         <li>
-                            <i data-vieo="http://open.nlc.cn/onlineedu/course/detail/show/course.htm?courseid=4535"><img src="./imagepc/1.png" alt=""></i>
+                            <i data-video="http://open.nlc.cn/onlineedu/course/detail/show/course.htm?courseid=4535"><img src="./imagepc/1.png" alt=""></i>
                             <div class="active">
                                 <p>诗经十二讲</p>
                             </div>
@@ -152,8 +152,8 @@
     //     cc1.initialize(); //初始化
 
 
-    $('#ideo-box-pics li').click(function () {
-        var url = $(this).children('i').attr('data-video');
+    $('#ideo-box-pics li i').click(function () {
+        var url = $(this).attr('data-video');
         window.open(url)
     });
 

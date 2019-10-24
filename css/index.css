@@ -78,6 +78,16 @@
   bottom: 0;
   margin: auto;
 }
+.row-tishi p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  white-space: nowrap;
+}
 .loading-box {
   position: fixed;
   left: 0;
@@ -348,22 +358,30 @@
   display: block;
   width: 100%;
 }
+.total-box .home-box .juan-box .juan-text-brother {
+  width: 100%;
+  height: 5.33333333rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.total-box .home-box .juan-box .juan-text-brother.ended + .juan-text .juan-text-box {
+  height: 0rem;
+  transition: all 3s;
+}
 .total-box .home-box .juan-box .juan-text {
   position: absolute;
   left: 50%;
   bottom: 1.33333333rem;
   margin-left: -3rem;
-  width: 6rem;
+  width: 6.26666667rem;
   transition: all 3s;
   overflow: hidden;
+  padding: 0 0.13333333rem;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box {
   width: 100%;
   height: 16rem;
-  transition: all 3s;
-}
-.total-box .home-box .juan-box .juan-text .juan-text-box.ended {
-  height: 0rem;
   transition: all 3s;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box .home-img-box {
@@ -390,11 +408,11 @@
   z-index: 1;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(1) {
-  left: -0.13333333rem;
+  left: 0rem;
   top: 0rem;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(2) {
-  left: -0.13333333rem;
+  left: 0rem;
   bottom: -0.2rem;
 }
 .total-box .home-box .text-box {
@@ -428,7 +446,7 @@
   animation: topsY 3s linear infinite;
 }
 .total-box .home-box .text-box i:nth-of-type(2) {
-  width: 2.66666667rem;
+  width: 3.06666667rem;
   position: absolute;
   left: 4rem;
   top: 50%;
