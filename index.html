@@ -120,7 +120,7 @@
                     <img src="./image/backgrounds/8.jpg" alt="">
                 </div>
                 <div class="content-box-pics-item-box a6">
-                    <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC0661_01.mp4"><img src="./image/backgroundz/9.png" alt=""></i>
+                    <i data-video="http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC0088_01.mp4"><img src="./image/backgroundz/9.png" alt=""></i>
                     <b data-delighter><img src="./image/backgroundz/2-6.png" alt=""></b>
                     <a><img src="./image/backgroundz/1.9.png" alt=""></a>
                 </div>
@@ -181,15 +181,18 @@
     <div class="home-box">
         <div class="juan-box">
             <div class="juan-text-brother" data-delighter></div>
-            <div class="juan-text">
-                <div class="juan-text-box">
-                    <i id="juan-left"></i>
-                    <div class="home-img-box">
-                        <img src="./image/b-j.jpg" alt="">
+            <div class="juan-zhanwei">
+                <div class="juan-text">
+                    <div class="juan-text-box">
+                        <i id="juan-left"></i>
+                        <div class="home-img-box">
+                            <img src="./image/b-j.jpg" alt="">
+                        </div>
+                        <i></i>
                     </div>
-                    <i></i>
                 </div>
             </div>
+
             <div class="juan-back">
                 <img src="./image/b-1.jpg" alt="">
             </div>
@@ -228,6 +231,7 @@
         },10);
         // 点击播放视频
         $('.content-box-pics-item-box > i').click(function () {
+            $('body').css({overflow: 'hidden'})
             console.log($(this).attr('data-video'))
             $('.video-box').show();
             setvideo($(this).attr('data-video'));
@@ -237,6 +241,7 @@
         });
         // 点击关闭视频
         $('.video-box').click(function(){
+            $('body').css({overflow: 'visible'})
             $(this).hide();
             document.getElementById('video').pause()
             document.getElementsByTagName('audio')[0].play();
@@ -253,6 +258,7 @@
             }
             youku.html(htmlstr);
             document.getElementById('video').play();
+            document.getElementById('video').requestFullscreen();
         };
 
         function SetSystem() {
@@ -268,21 +274,7 @@
                 return 'Ios'
             }
         }
-        // 卷轴
-        // $(document).scroll(function() {
-        //   // var scroH = $(document).scrollTop();  //滚动高度
-        //   // console.log(scroH)
-        //   // var swHeight = $(window).scrollTop()+$(window).height();
-        //   // var mTop= document.getElementById('juan-left').scrollHeight;
-        //   // var off= $('.home-img-box').offset().top + $('.home-img-box').height();
-        //   // var tto = $(window).height() + $(window).scrollTop();
-        //   // // console.log(tto - off);
-        //   // if( tto - off <= 728 && tto - off >= 75) {
-        //   //   $('.juan-text-box i:nth-of-type(1)').addClass('active');
-        //   // } else {
-        //   //   $('.juan-text-box i:nth-of-type(1)').removeClass('active');
-        //   // }
-        // })
+
         // 音频播放
         document.getElementsByTagName('audio')[0].play();
         document.addEventListener("WeixinJSBridgeReady", function () {

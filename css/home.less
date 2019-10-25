@@ -1,6 +1,18 @@
 @charset "UTF-8";
 @-webkit-keyframes ScrollPic{
-  0%{left: -18751px;}
+  0%{left: -20967px;}
+  100%{left: 0px;}
+}
+@-moz-keyframes ScrollPic{
+  0%{left: -20967px;}
+  100%{left: 0px;}
+}
+@-o-keyframes ScrollPic{
+  0%{left: -20967px;}
+  100%{left: 0px;}
+}
+@keyframes ScrollPic{
+  0%{left: -20967px;}
   100%{left: 0px;}
 }
 .box {
@@ -11,8 +23,8 @@
     url("../imagepc/diwen.png") no-repeat -250px 900px,
     url("../imagepc/diwen.png") no-repeat 130% -250px,
     url("../imagepc/diwen.png") no-repeat 130% 900px,
-    url("../imagepc/diwen.png") no-repeat 5% 60%,
-    url("../imagepc/diwen.png") no-repeat 95% 60%;
+    url("../imagepc/diwen.png") no-repeat 5% 40%,
+    url("../imagepc/diwen.png") no-repeat 95% 40%;
     padding-top: 47px;
     .content {
       width: 1155px;
@@ -82,20 +94,20 @@
   overflow: hidden;
   position: relative;
   ul {
-    width: 19907px;
+    width: 22115px;
     height: 446px;
     overflow: hidden;
     position: absolute;
     top: 0;
-    left: -18751px;
+    left: -20967px;
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
     -moz-transition-property: -moz-transform;
     -moz-transition-duration: 1s;
-    -webkit-animation: ScrollPic 50s linear infinite;
-    -moz-animation: ScrollPic 50s linear infinite;
-    -o-animation: ScrollPic 50s linear infinite;
-    animation: ScrollPic 500s linear infinite;
+    -webkit-animation: ScrollPic 700s linear infinite;
+    -moz-animation: ScrollPic 700s linear infinite;
+    -o-animation: ScrollPic 700s linear infinite;
+    animation: ScrollPic 700s linear infinite;
     &:hover {
       animation-play-state:paused;
       cursor: pointer;
@@ -106,6 +118,7 @@
       img {
         display: block;
         height: 100%;
+        border:0;
       }
     }
   }
@@ -215,9 +228,15 @@
     }
   }
 }
+.banquan {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 50px;
+}
 .footer {
   width: 100%;
-  margin-top: 108px;
+  margin-top: 48px;
   img {
     display: block;
     width: 100%;

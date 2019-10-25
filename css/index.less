@@ -370,25 +370,35 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        &.ended + .juan-text {
-          .juan-text-box {
-            height: 0rem / @size;
-            transition: all 3s;
+        &.ended + .juan-zhanwei {
+          .juan-text {
+            .juan-text-box {
+              height: 0rem / @size;
+              transition: all 3s;
+            }
           }
         }
+      }
+      .juan-zhanwei {
+        width: 520rem / @size;
+        height: 1400rem / @size;
+        position: absolute;
+        bottom: 100rem / @size;
+        left: 50%;
+        margin-left: -260rem / @size;
       }
       .juan-text {
         position: absolute;
         left: 50%;
         bottom: 100rem / @size;
-        margin-left: -225rem / @size;
-        width: 470rem / @size;
+        margin-left: -260rem / @size;
+        width: 520rem / @size;
         transition: all 3s;
         overflow: hidden;
         padding: 0 10rem/@size;
         .juan-text-box {
           width: 100%;
-          height: 1200rem / @size;
+          height: 1400rem / @size;
           transition: all 3s;
           // &.ended {
           //   height: 0rem / @size;
@@ -401,19 +411,19 @@
             overflow: hidden;
             img {
               display: block;
-              width: 450rem / @size;
-              height: 1200rem / @size;
+              width: 500rem / @size;
+              height: 1400rem / @size;
               position: absolute;
               left: 50%;
               bottom: 0rem / @size;
-              margin-left: -225rem / @size;
+              margin-left: -250rem / @size;
             }
           }
           i {
             display: block;
             position: absolute;
-            width: 470rem / @size;
-            height: 30rem / @size;
+            width: 520rem / @size;
+            height: 40rem / @size;
             background: url("../image/b-l.png") no-repeat;
             background-size: 100% 100%;
             z-index: 1;
@@ -428,7 +438,7 @@
             }
             &:nth-of-type(2) {
               left: 0rem / @size;
-              bottom: -15rem / @size;
+              bottom: -18rem / @size;
             }
           }
         }

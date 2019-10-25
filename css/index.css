@@ -365,23 +365,31 @@
   bottom: 0;
   left: 0;
 }
-.total-box .home-box .juan-box .juan-text-brother.ended + .juan-text .juan-text-box {
+.total-box .home-box .juan-box .juan-text-brother.ended + .juan-zhanwei .juan-text .juan-text-box {
   height: 0rem;
   transition: all 3s;
+}
+.total-box .home-box .juan-box .juan-zhanwei {
+  width: 6.93333333rem;
+  height: 18.66666667rem;
+  position: absolute;
+  bottom: 1.33333333rem;
+  left: 50%;
+  margin-left: -3.46666667rem;
 }
 .total-box .home-box .juan-box .juan-text {
   position: absolute;
   left: 50%;
   bottom: 1.33333333rem;
-  margin-left: -3rem;
-  width: 6.26666667rem;
+  margin-left: -3.46666667rem;
+  width: 6.93333333rem;
   transition: all 3s;
   overflow: hidden;
   padding: 0 0.13333333rem;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box {
   width: 100%;
-  height: 16rem;
+  height: 18.66666667rem;
   transition: all 3s;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box .home-img-box {
@@ -391,18 +399,18 @@
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box .home-img-box img {
   display: block;
-  width: 6rem;
-  height: 16rem;
+  width: 6.66666667rem;
+  height: 18.66666667rem;
   position: absolute;
   left: 50%;
   bottom: 0rem;
-  margin-left: -3rem;
+  margin-left: -3.33333333rem;
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i {
   display: block;
   position: absolute;
-  width: 6.26666667rem;
-  height: 0.4rem;
+  width: 6.93333333rem;
+  height: 0.53333333rem;
   background: url("../image/b-l.png") no-repeat;
   background-size: 100% 100%;
   z-index: 1;
@@ -413,7 +421,7 @@
 }
 .total-box .home-box .juan-box .juan-text .juan-text-box i:nth-of-type(2) {
   left: 0rem;
-  bottom: -0.2rem;
+  bottom: -0.24rem;
 }
 .total-box .home-box .text-box {
   width: 100%;
