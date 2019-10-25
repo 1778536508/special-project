@@ -126,8 +126,9 @@
   cursor: pointer;
 }
 .scrollPics ul li {
-  float: left;
+  display: inline-block;
   height: 100%;
+  margin-right: -5px;
 }
 .scrollPics ul li img {
   display: block;

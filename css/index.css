@@ -174,6 +174,9 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
 }
+.total-box .video-box.active {
+  background: #000;
+}
 .total-box .video-box video {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -moz-transform: translateY(-50%) rotate(90deg);
@@ -183,6 +186,15 @@
   position: absolute;
   top: 50%;
   visibility: visible;
+}
+.total-box .video-box video.active {
+  display: block;
+  width: 100%;
+  -webkit-transform: translateY(-50%) rotate(0deg);
+  -moz-transform: translateY(-50%) rotate(0deg);
+  -ms-transform: translateY(-50%) rotate(0deg);
+  -o-transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%) rotate(0deg);
 }
 .total-box .content-box {
   width: 100%;
