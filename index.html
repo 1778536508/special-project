@@ -278,7 +278,7 @@
             // })
             // window.scroll(0, $(window).scrollTop());
             move();
-            $(this).hide();
+            $('.video-box').hide();
             document.getElementById('video').pause()
             document.getElementsByTagName('audio')[0].play();
             $('.music-box').addClass('active')
@@ -292,7 +292,9 @@
                 htmlstr ='<video class="active" id="video" width="100%" src="'+url+'" poster="img/lunyu.png" preload="auto" controls="controls"></video>'
             } else {
                 $('.video-box').removeClass('active');
-                htmlstr ='<video id="video" width="100%" src="'+url+'" poster="img/lunyu.png" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" x5-playsinline="" x5-video-player-fullscreen="false" controls="controls"></video>'
+                htmlstr ='<video id="video" width="100%" poster="img/lunyu.png" preload="auto" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" x5-playsinline="" x5-video-player-fullscreen="false" controls="controls">' +
+                        '<source src="'+url+'" type="video/mp4" />'
+                    '</video>'
             }
             youku.html(htmlstr);
             document.getElementById('video').play();

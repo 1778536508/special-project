@@ -3,32 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1222487c-d5cf-45cd-bc59-057093596ecc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagepc/backgroundz/9.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ScrollPic.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="376" column="33" lean-forward="true" selection-start-line="376" selection-start-column="33" selection-end-line="376" selection-end-column="33" />
+            <state relative-caret-position="247">
+              <caret line="145" column="23" lean-forward="true" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -53,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="260" column="65" selection-start-line="260" selection-start-column="65" selection-end-line="260" selection-end-column="65" />
+            <state relative-caret-position="211">
+              <caret line="280" column="35" selection-start-line="280" selection-start-column="35" selection-end-line="280" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -62,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="215">
+              <caret line="130" column="12" selection-start-line="130" selection-start-column="3" selection-end-line="130" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -107,17 +82,17 @@
       <find>left</find>
       <find>http://open.nlc.cn/onlineedu/course/detail/show/course.htm?courseid=3109</find>
       <find>scrollPics</find>
-      <find>video-box</find>
       <find>ScrollPic</find>
       <find>http://open.nlc.cn/onlineedu/course/detail/show/course.htm?courseid=4535</find>
       <find>image</find>
       <find>overflow: hidden</find>
       <find>backgroundz</find>
       <find>十二</find>
-      <find>juan-text</find>
       <find>8.jpg</find>
+      <find>juan-text</find>
       <find>juan-text-box</find>
       <find>http://stream.nlc.cn/issue/zhuanti/hongloumeng/2015MOOC0088_01.mp4</find>
+      <find>video-box</find>
     </findStrings>
     <replaceStrings>
       <replace>backgrounds</replace>
@@ -214,12 +189,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571795872342</updated>
-      <workItem from="1571795873694" duration="31875000" />
+      <workItem from="1571795873694" duration="35771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31875000" />
+    <option name="totallyTimeSpent" value="35771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -282,20 +257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/home.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="376" column="33" lean-forward="true" selection-start-line="376" selection-start-column="33" selection-end-line="376" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image/backgroundz/9.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -306,10 +267,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/home.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="130" column="12" selection-start-line="130" selection-start-column="3" selection-end-line="130" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="145" column="23" lean-forward="true" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="260" column="65" selection-start-line="260" selection-start-column="65" selection-end-line="260" selection-end-column="65" />
+        <state relative-caret-position="211">
+          <caret line="280" column="35" selection-start-line="280" selection-start-column="35" selection-end-line="280" selection-end-column="35" />
         </state>
       </provider>
     </entry>
