@@ -1,20 +1,20 @@
 @charset "UTF-8";
-@-webkit-keyframes ScrollPic{
-  0%{left: -20967px;}
-  100%{left: 0px;}
-}
-@-moz-keyframes ScrollPic{
-  0%{left: -20967px;}
-  100%{left: 0px;}
-}
-@-o-keyframes ScrollPic{
-  0%{left: -20967px;}
-  100%{left: 0px;}
-}
-@keyframes ScrollPic{
-  0%{left: -20967px;}
-  100%{left: 0px;}
-}
+// @-webkit-keyframes ScrollPic{
+//   0%{left: -20967px;}
+//   100%{left: 0px;}
+// }
+// @-moz-keyframes ScrollPic{
+//   0%{left: -20967px;}
+//   100%{left: 0px;}
+// }
+// @-o-keyframes ScrollPic{
+//   0%{left: -20967px;}
+//   100%{left: 0px;}
+// }
+// @keyframes ScrollPic{
+//   0%{left: -20967px;}
+//   100%{left: 0px;}
+// }
 .box {
   width: 100%;
   .box-content {
@@ -90,24 +90,36 @@
 }
 .scrollPics {
   width: 100%;
-  height: 446px;
-  overflow: hidden;
-  position: relative;
+  height: 480px;
+  overflow-x: auto;
+  scrollbar-arrow-color: #825939; /**//*三角箭头的颜色*/ 
+  scrollbar-face-color: #825939; /**//*立体滚动条的颜色*/ 
+  scrollbar-track-color: #D1C3B8; /**//*立体滚动条背景颜色*/
+  scrollbar-shadow-color: #825939; /**//*立体滚动条阴影的颜色*/
+  &::-webkit-scrollbar {  
+    width: 100%;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #D1C3B8;
+  }
+  &::-webkit-scrollbar-thumb{
+      background-color: #825939;
+  }
   ul {
     width: 22115px;
     height: 446px;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: -20967px;
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-    -webkit-animation: ScrollPic 700s linear infinite;
-    -moz-animation: ScrollPic 700s linear infinite;
-    -o-animation: ScrollPic 700s linear infinite;
-    animation: ScrollPic 700s linear infinite;
+    // position: absolute;
+    // top: 0;
+    // left: -20967px;
+    // -webkit-transition-property: -webkit-transform;
+    // -webkit-transition-duration: 1s;
+    // -moz-transition-property: -moz-transform;
+    // -moz-transition-duration: 1s;
+    // -webkit-animation: ScrollPic 700s linear infinite;
+    // -moz-animation: ScrollPic 700s linear infinite;
+    // -o-animation: ScrollPic 700s linear infinite;
+    // animation: ScrollPic 700s linear infinite;
     &:hover {
       animation-play-state:paused;
       cursor: pointer;
@@ -128,6 +140,7 @@
 .video-box {
   width: 100%;
   background: rgba(255,255,255,.8);
+  margin-top: 60px;
   .video-box-gongkai {
     width: 100%;
     margin-top: 27px;

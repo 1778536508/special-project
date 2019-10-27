@@ -18,8 +18,8 @@
                 <i></i>
                 <b></b>
                 <div class="scrollPics-content">
-                    <div class="scrollPics">
-                        <ul id="scrollPics">
+                    <div class="scrollPics" id="scrollPics">
+                        <ul>
                             <li><img src="./imagepc/backgrounds/21.jpg" alt=""></li>
                             <li><img src="./imagepc/backgrounds/20.jpg" alt=""></li>
                             <li><img src="./imagepc/backgrounds/19.jpg" alt=""></li>
@@ -145,6 +145,37 @@
 </html>
 <script>
     $(function () {
+        var speed = $('#scrollPics ul').width() / 700;
+        var distance = 0;
+        $('#scrollPics').scrollLeft($('#scrollPics ul').width())
+        loops();
+        function loops() {
+            $('#scrollPics').animate({scrollLeft:0}, 700000, 'linear', function() {
+                $('#scrollPics').scrollLeft($('#scrollPics ul').width())
+                setTimeout(function() {
+                    loops();
+                },100)
+            });
+        }
+        $('#scrollPics').scroll(function() {
+            console.log($('#scrollPics').scrollLeft())
+            distance = $('#scrollPics').scrollLeft();
+        })
+        $('#scrollPics').hover(function() {
+            // distance = $('#scrollPics').scrollLeft();
+            $('#scrollPics').stop(true)
+            console.log('速度=>', speed)
+            console.log('路程=>', distance)
+        }, function() {
+            var time = (distance / speed) * 1000;
+            console.log('时间->',(distance / speed) * 1000)
+            $('#scrollPics').animate({scrollLeft:0}, time, 'linear', function() {
+                $('#scrollPics').scrollLeft($('#scrollPics ul').width())
+                setTimeout(function() {
+                    loops();
+                },100)
+            });
+        })
         $('.ideo-box-pics li i').click(function () {
             var url = $(this).attr('data-video');
             window.open(url)
