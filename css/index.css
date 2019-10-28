@@ -73,17 +73,28 @@
   height: 2.66666667rem;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3.33333333rem;
   right: 0;
   bottom: 0;
   margin: auto;
+}
+.row-tishi b {
+  display: block;
+  width: 0.66666667rem;
+  height: 0.66666667rem;
+  background: url("../image/guan.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 .row-tishi p {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
   white-space: nowrap;

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .box {
   width: 100%;
+  background: #fff;
 }
 .box .box-content {
   width: 100%;
@@ -94,7 +95,7 @@
   background-color: #825939;
 }
 .scrollPics ul {
-  width: 22115px;
+  width: 21557px;
   height: 446px;
   overflow: hidden;
 }
