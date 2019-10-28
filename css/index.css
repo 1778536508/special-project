@@ -67,7 +67,7 @@
   opacity: 0;
   transition: all .3s;
 }
-.row-tishi img {
+.row-tishi > img {
   display: block;
   width: 2.4rem;
   height: 2.66666667rem;
@@ -82,12 +82,15 @@
   display: block;
   width: 0.66666667rem;
   height: 0.66666667rem;
-  background: url("../image/guan.png") no-repeat;
-  background-size: 100% 100%;
   position: absolute;
   top: 60%;
   transform: translate(-50%, -50%);
   left: 50%;
+}
+.row-tishi b img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .row-tishi p {
   color: #fff;

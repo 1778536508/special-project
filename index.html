@@ -20,14 +20,29 @@
 <div class="row-tishi">
     <img src="./image/hengtisz.gif" alt="">
     <p>请将手机锁屏后横屏观看</p>
-    <b></b>
+    <b><img src="./image/guan.png" alt=""></b>
 </div>
+<script>
+    $('.row-tishi').click(function () {
+        $(this).addClass('active')
+        setTimeout(function () {
+            $('.row-tishi').hide()
+        },100)
+    })
+</script>
 <!--loading-->
 <div class="loading-box">
     <img src="./image/huaban-2.jpg" alt="">
     <i><img src="./image/loading.gif" alt=""></i>
     <b id="loadingNum">0%</b>
 </div>
+<script>
+    // 随机数
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    $('#loadingNum').html(random(0, 30) + '%');
+</script>
 <div class="total-box" id="total-box">
     <div class="content-box">
         <ul class="content-box-pics">
@@ -232,6 +247,13 @@
 </body>
 </html>
 <script>
+    setTimeout(function () {
+        // 随机数
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        $('#loadingNum').html(random(30, 60) + '%');
+    },500)
     window.onload = function () {
         
         // var isTop = $(window).scrollTop();
@@ -341,39 +363,39 @@
             state = !state
         })
 
+
         //loading
         function fnLoading() {
-            var num = 0;
-            var IntervalName = setInterval(function () {
-                num++;
-                if(num >= 100) {
-                    num = 100
-                }
-                $('#loadingNum').html(num + '%');
-                if(num == 100) {
-                    setTimeout(function () {
-                        clearInterval(IntervalName);
-                        $('.total-box').css({
-                            opacity: 1
-                        })
-                        $('.loading-box').addClass('active');
+            var num = Number($('#loadingNum').html().split('%')[0]);
+            setTimeout(function () {
+                var IntervalName = setInterval(function () {
+                    num++;
+                    if(num >= 100) {
+                        num = 100
+                    }
+                    $('#loadingNum').html(num + '%');
+                    if(num == 100) {
                         setTimeout(function () {
-                            $('.loading-box').hide();
+                            clearInterval(IntervalName);
+                            $('.total-box').css({
+                                opacity: 1
+                            })
+                            $('.loading-box').addClass('active');
+                            setTimeout(function () {
+                                $('.loading-box').hide();
+                                move();
+                            },500)
                         },500)
-                    },500)
-                }
-            })
+                    }
+                })
+            },500)
+
         }
         // 开屏提示
         setTimeout(function () {
+            stop();
             fnLoading();
         },800)
-        $('.row-tishi').click(function () {
-            $(this).addClass('active')
-            setTimeout(function () {
-                $('.row-tishi').hide()
-            },100)
-        })
     };
     
 </script>
