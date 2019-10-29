@@ -22,14 +22,6 @@
     <p>请将手机锁屏后横屏观看</p>
     <b><img src="./image/guan.png" alt=""></b>
 </div>
-<script>
-    $('.row-tishi').click(function () {
-        $(this).addClass('active')
-        setTimeout(function () {
-            $('.row-tishi').hide()
-        },100)
-    })
-</script>
 <!--loading-->
 <div class="loading-box">
     <img src="./image/huaban-2.jpg" alt="">
@@ -243,6 +235,15 @@
             <source src="./image/KF016410_Asian_Borders.mp3"/>
         </audio>
     </div>
+    <script>
+        $('.row-tishi').click(function () {
+            $(this).addClass('active')
+            setTimeout(function () {
+                $('.row-tishi').hide()
+                document.getElementsByTagName('audio')[0].play();
+            },100)
+        })
+    </script>
 </div>
 </body>
 </html>
